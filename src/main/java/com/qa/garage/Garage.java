@@ -11,6 +11,7 @@ import com.qa.garage.vehicle.Vehicle;
 public class Garage {
 
 	private List<Vehicle> vehicles = new ArrayList<>();
+	
 
 	public boolean addVehicle(Vehicle v) {
 		return this.vehicles.add(v);

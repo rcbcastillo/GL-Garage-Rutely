@@ -2,7 +2,7 @@ package com.qa.garage;
 
 import interfacegarage.Billable;
 
-public abstract class Employee implements Billable {
+public class Employee implements Billable {
 
 	private String name;
 	private int age;
@@ -15,9 +15,10 @@ public abstract class Employee implements Billable {
 		this.specialism = specialism;
 	}
 
-	public void  calcBill() {
-		System.out.println("The bill is for a Employee");
-	};
+	 @Override
+	public int calcBill() {
+		return 0;
+	}
 
 	public String getName() {
 		return this.name;

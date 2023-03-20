@@ -1,5 +1,5 @@
 package interfacegarage;
 
 public interface Billable {
-	void calcBill();
+	int calcBill();
 }

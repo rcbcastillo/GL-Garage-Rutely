@@ -14,23 +14,21 @@ public abstract class Vehicle implements Billable {
 
 	public Vehicle(int numWheels, String colour) {		
 		super();
-		this.id = count;
+		this.id = count++;
 		this.numWheels = numWheels;
 		this.colour = colour;
 	
 	}
 
-	public void  calcBill() {
-		System.out.println("The bill is for a Vehicle");
-	};
+	//public abstract int calcBill();
 
 	public int getId() {
 		return this.id;
 	}
 
-	public static int counter() {
-		return count++;
-	}
+//	public static int counter() {
+//		return count++;
+//	}
 
 	public int getNumWheels() {
 		return this.numWheels;
