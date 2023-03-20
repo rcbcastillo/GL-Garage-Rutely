@@ -17,6 +17,8 @@ public class Runner {
 	public static void main(String[] args) {
 		Garage g = new Garage();
 		
+		// Create vehicle instances
+		
 		Vehicle car1 = new Car(4, "Black");
 		g.addVehicle(car1);
 		billableObjects.add(car1);
@@ -42,10 +44,7 @@ public class Runner {
 		Employee person2 = new Employee("Jane", 38, "Customer service");
 		billableObjects.add(person2);
 		
-//		g.addVehicle(new Boat(0, "Blue"));
-//		g.addVehicle(new Bike(2, "Red"));
-//		g.addVehicle(new Car(3, "red"));
-		
+
 		
 
 		System.out.println(Vehicle.count);
