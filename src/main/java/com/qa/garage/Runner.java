@@ -45,15 +45,14 @@ public class Runner {
 		billableObjects.add(person2);
 		
 
+		// Loop through billableObjects
 		
+		for (Billable item : billableObjects) {
+			System.out.println(item.calcBill());
+			System.out.println(item);
+		}
 
-		System.out.println(Vehicle.count);
-		System.out.println();
-		System.out.println();
-
-//		g.removeByType("car");
-		g.remove(Car.class);
-		System.out.println(g);
+		
 	}
 
 }
