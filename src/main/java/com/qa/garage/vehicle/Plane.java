@@ -1,9 +1,12 @@
 package com.qa.garage.vehicle;
 
 public class Plane extends Vehicle {
+	public final int id;
 
+		
 	public Plane(int numWheels, String colour) {
 		super(numWheels, colour);
+		this.id = count;
 	}
 
 	@Override
