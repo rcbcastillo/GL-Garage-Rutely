@@ -1,6 +1,8 @@
 package com.qa.garage;
 
-public class Employee {
+import interfacegarage.Billable;
+
+public abstract class Employee implements Billable {
 
 	private String name;
 	private int age;
@@ -13,9 +15,9 @@ public class Employee {
 		this.specialism = specialism;
 	}
 
-	public Employee() {
-		super();
-	}
+	public void  calcBill() {
+		System.out.println("The bill is for a Employee");
+	};
 
 	public String getName() {
 		return this.name;

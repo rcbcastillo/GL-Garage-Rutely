@@ -1,7 +1,8 @@
 package com.qa.garage.vehicle;
 
+import interfacegarage.Billable;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Billable {
 
 	private int numWheels;
 
@@ -19,7 +20,9 @@ public abstract class Vehicle {
 	
 	}
 
-	public abstract int calcBill();
+	public void  calcBill() {
+		System.out.println("The bill is for a Vehicle");
+	};
 
 	public int getId() {
 		return this.id;
