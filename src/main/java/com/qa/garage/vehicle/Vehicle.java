@@ -1,7 +1,8 @@
 package com.qa.garage.vehicle;
 
+import interfacegarage.Billable;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Billable {
 
 	private int numWheels;
 
@@ -13,21 +14,21 @@ public abstract class Vehicle {
 
 	public Vehicle(int numWheels, String colour) {		
 		super();
-		this.id = count;
+		this.id = count++;
 		this.numWheels = numWheels;
 		this.colour = colour;
 	
 	}
 
-	public abstract int calcBill();
+	//public abstract int calcBill();
 
 	public int getId() {
 		return this.id;
 	}
 
-	public static int counter() {
-		return count++;
-	}
+//	public static int counter() {
+//		return count++;
+//	}
 
 	public int getNumWheels() {
 		return this.numWheels;
