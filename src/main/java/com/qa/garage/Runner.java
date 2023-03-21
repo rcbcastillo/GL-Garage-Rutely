@@ -13,8 +13,7 @@ import interfacegarage.Billable;
 import vehicles.VehicleNotFoundException;
 
 public class Runner {
-	static Scanner scan = new Scanner(System.in);
-	
+		
 	static List<Billable> billableObjects = new ArrayList<>();
 	
 	public static void main(String[] args) throws VehicleNotFoundException {
@@ -72,9 +71,7 @@ public class Runner {
 					System.out.println("Error found" + e);;
 				}
 			}
-		} finally {
-			scan.close();
-		}
+		} 
 
 		
 	
