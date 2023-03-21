@@ -18,6 +18,19 @@ public class Garage {
 	public boolean addVehicle(Vehicle v) {
 		return this.vehicles.add(v);
 	}
+	
+	// create findById method
+	public boolean findById (int id)  {		
+		boolean doesItemExist = false;
+		
+		for (Vehicle item: this.vehicles) {
+			if (item.getId() == id) {
+				doesItemExist = true;
+			}
+			
+		}
+		return doesItemExist;
+	}
 
 	public boolean empty() {
 		this.vehicles.clear();
