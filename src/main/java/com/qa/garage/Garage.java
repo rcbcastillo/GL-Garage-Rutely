@@ -8,6 +8,8 @@ import com.qa.garage.vehicle.Car;
 import com.qa.garage.vehicle.Plane;
 import com.qa.garage.vehicle.Vehicle;
 
+import vehicles.VehicleNotFoundException;
+
 public class Garage {
 
 	private List<Vehicle> vehicles = new ArrayList<>();
@@ -42,12 +44,15 @@ public class Garage {
 		return bill;
 	}
 
-	public boolean remove(int id) {
+	// add a vehicle not found exception to the remove()
+	public boolean remove(int id) throws VehicleNotFoundException {
+		
 		for (Vehicle v : this.vehicles) {
 			if (v.getId() == id) {
 				this.vehicles.remove(v);
 				return true;
 			}
+			throw new VehicleNotFoundException("Id not found");
 		}
 		return false;
 	}
