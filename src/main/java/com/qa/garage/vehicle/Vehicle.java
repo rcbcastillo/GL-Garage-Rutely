@@ -48,7 +48,7 @@ public abstract class Vehicle implements Billable {
 
 	@Override
 	public String toString() {
-		return "Vehicle [numWheels=" + this.numWheels + ", numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
+		return "Vehicle [id=" + this.id + ", numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
 	}
 
 }

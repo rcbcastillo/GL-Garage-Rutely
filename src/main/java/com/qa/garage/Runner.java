@@ -2,6 +2,7 @@ package com.qa.garage;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import com.qa.garage.vehicle.Bike;
 import com.qa.garage.vehicle.Boat;
@@ -9,12 +10,14 @@ import com.qa.garage.vehicle.Car;
 import com.qa.garage.vehicle.Vehicle;
 
 import interfacegarage.Billable;
+import vehicles.VehicleNotFoundException;
 
 public class Runner {
-		
+	static Scanner scan = new Scanner(System.in);
+	
 	static List<Billable> billableObjects = new ArrayList<>();
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws VehicleNotFoundException {
 		Garage g = new Garage();
 		
 		// Create vehicle instances
@@ -44,15 +47,35 @@ public class Runner {
 		Employee person2 = new Employee("Jane", 38, "Customer service");
 		billableObjects.add(person2);
 		
-
-		// Loop through billableObjects
-		
-		for (Billable item : billableObjects) {
-			System.out.println(item.calcBill());
-			System.out.println(item);
+		// calling findById method
+		// I was prompted to add throws VehicleNotFoundException in main
+		System.out.println("-------------------");
+		System.out.println(" Calling findById method 1) id (must be integer) 2) \"q\" to quit");
+		try {
+			while (true) {
+				try {
+					System.out.println(" Enter an id: ");
+					String userInputStr = scan.nextLine();
+					
+					// to end the game enter "q"
+		        	if (userInputStr.equals("q")) {
+		        		System.out.println("Make sure you saved your information!");
+		        		break;
+		        	}
+			        
+				    int userInput = Integer.valueOf(userInputStr);
+					System.out.println(g.findById(userInput) + "<-- Find by Id");
+					
+				} catch (Exception e) {
+					System.out.println("Error found" + e);;
+				}
+			}
+		} finally {
+			scan.close();
 		}
 
 		
+	
 	}
 
 }

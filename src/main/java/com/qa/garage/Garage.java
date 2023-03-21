@@ -20,16 +20,15 @@ public class Garage {
 	}
 	
 	// create findById method, then alter it to throw vnfe exception
-	public boolean findById (int id) throws VehicleNotFoundException  {		
-		boolean doesItemExist = false;
+	public Vehicle findById (int id) throws VehicleNotFoundException  {
+		 
 		
 		for (Vehicle item: this.vehicles) {
 			if (item.getId() == id) {
-				doesItemExist = true;
-			}
-			throw new VehicleNotFoundException("Id not found!");
+				return item;
+			}			
 		}
-		return doesItemExist;
+		throw new VehicleNotFoundException("Id not found!");
 	}
 
 	public boolean empty() {

@@ -44,4 +44,11 @@ public class Employee implements Billable {
 		this.specialism = specialism;
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", age=" + age + ", specialism=" + specialism + "]";
+	}
+	
+	
+
 }
