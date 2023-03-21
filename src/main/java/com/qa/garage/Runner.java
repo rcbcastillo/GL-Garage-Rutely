@@ -51,7 +51,7 @@ public class Runner {
 		// I was prompted to add throws VehicleNotFoundException in main
 		System.out.println("-------------------");
 		System.out.println(" Calling findById method 1) id (must be integer) 2) \"q\" to quit");
-		try {
+		try (Scanner scan = new Scanner(System.in);) {
 			while (true) {
 				try {
 					System.out.println(" Enter an id: ");
@@ -66,7 +66,9 @@ public class Runner {
 				    int userInput = Integer.valueOf(userInputStr);
 					System.out.println(g.findById(userInput) + "<-- Find by Id");
 					
-				} catch (Exception e) {
+				} catch (NumberFormatException nfe) {
+					System.out.println("\"Your input must be an integer\"");
+				}	catch (Exception e) {
 					System.out.println("Error found" + e);;
 				}
 			}
