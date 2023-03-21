@@ -13,7 +13,8 @@ import interfacegarage.Billable;
 import vehicles.VehicleNotFoundException;
 
 public class Runner {
-		
+	
+	
 	static List<Billable> billableObjects = new ArrayList<>();
 	
 	public static void main(String[] args) throws VehicleNotFoundException {
@@ -56,7 +57,7 @@ public class Runner {
 					System.out.println(" Enter an id: ");
 					String userInputStr = scan.nextLine();
 					
-					// to end the game enter "q"
+					// to exit enter "q"
 		        	if (userInputStr.equals("q")) {
 		        		System.out.println("Make sure you saved your information!");
 		        		break;
@@ -71,9 +72,7 @@ public class Runner {
 					System.out.println("Error found" + e);;
 				}
 			}
-		} 
-
-		
+		} 		
 	
 	}
 
