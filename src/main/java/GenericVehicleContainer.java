@@ -5,7 +5,7 @@ import com.qa.garage.vehicle.Vehicle;
 
 import vehicles.VehicleNotFoundException;
 
-public class GenericVehicleContainer <T extends Vehicle> {
+public class GenericVehicleContainer <T extends Vehicle>  {
 	
 	private List<T> vehicles = new ArrayList<>();
 	
